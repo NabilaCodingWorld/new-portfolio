@@ -5,45 +5,52 @@ import Banner from '../Banner/Banner';
 import About from '../About/About';
 import Skills from '../Skills/Skills';
 import Projects from '../Projects/Projects';
+import Contacts from '../Contacts/Contacts';
+import Services from '../Services/Services';
 
 const Home = () => {
-  const [theme, setTheme] = React.useState('default');
+  // const [theme, setTheme] = React.useState('default');
 
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'default' ? 'dark' : 'default'));
-  };
+  // const toggleTheme = () => {
+  //   setTheme((prevTheme) => (prevTheme === 'default' ? 'dark' : 'default'));
+  // };
 
   const allNavTabs = (
     <>
       <li>
         <Link to="home" smooth={true} duration={500} offset={-70}>
-          Home
+        <a className='hover:text-white'>Home</a>
         </Link>
       </li>
       <li>
         <Link to="about" smooth={true} duration={500} offset={-70}>
-          About
+        <a className='hover:text-white'>Services</a>
+         
         </Link>
       </li>
       <li>
         <Link to="skills" smooth={true} duration={500} offset={-70}>
-          Skills
+        <a className='hover:text-white'> Skills</a>
+         
         </Link>
       </li>
       <li>
         <Link to="projects" smooth={true} duration={500} offset={-70}>
-          Projects
+        <a className='hover:text-white'>Projects</a>
+          
         </Link>
       </li>
       <li>
         <Link to="services" smooth={true} duration={500} offset={-70}>
-          Services
+        <a className='hover:text-white'>About</a>
+          
         </Link>
       </li>
       <li>
         <Link to="contact" smooth={true} duration={500} offset={-70}>
-          Contact
+        <a className='hover:text-white'>Contact</a>
+          
         </Link>
       </li>
     </>
@@ -59,7 +66,7 @@ const Home = () => {
 
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <div 
         className='navbar font-bold text-white mb-20'
       >
@@ -105,7 +112,7 @@ const Home = () => {
         <Projects></Projects>
       </Element>
 
-      {/* <Element name="services" className="element">
+       <Element name="services" className="element">
         <Services></Services>
       </Element>
 
@@ -113,9 +120,6 @@ const Home = () => {
         <Contacts></Contacts>
       </Element>
 
-      <Element name="contact" className="element">
-        <Form></Form>
-      </Element> */}
 
       <div className="md:ml-[1290px] ml-2 mt-10" style={{ position: 'fixed', top: '500px', width: '100%', zIndex: '1' }}> <br /> <br />
         {/* Your portfolio content */}

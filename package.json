@@ -10,13 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "aos": "^3.0.0-beta.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.2",
     "react-icons": "^4.11.0",
     "react-intersection-observer": "^9.5.2",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.17.0",
     "react-scroll": "^1.9.0",
     "sort-by": "^1.2.0",

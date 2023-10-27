@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import pic1 from '../../assets/download.png'
@@ -13,16 +13,27 @@ import pic9 from '../../assets/download (4).png'
 import pic10 from '../../assets/Rlogical-Blog-Images-thumbnail.webp'
 import pic11 from '../../assets/png-clipart-firebase-cloud-messaging-google-developers-software-development-kit-google-angle-triangle-thumbnail.png'
 import pic12 from '../../assets/download (4).jfif'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Skills = () => {
     const [ref, inView] = useInView();
     const shouldAnimate = inView;
 
+
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            easing: 'ease-in-sine',
+            duration: 600
+        });
+    }, []);
+
     return (
         <div className='my-40 '>
-            <p className='text-center text-4xl mb-10'>My Skills</p>
+            <p className='text-center text-4xl mb-10'>My <span className='text'>Skills</span> </p>
 
-            <div className='md:mx-20 mx-5 flex flex-wrap gap-10' ref={ref}>
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" className='md:mx-20 mx-10 flex flex-wrap gap-10' ref={ref}>
 
                 <div className='hover:text-yellow-400 duration-700 hover:translate-y-2'>
                     <div className='border-2 md:p-5 p-1 rounded-2xl'>

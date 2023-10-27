@@ -12,6 +12,8 @@ import { router } from './Route/Route.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <div style={{ fontFamily: 'roboto' }}>
+      <RouterProvider router={router} />
+    </div>
   </React.StrictMode>,
 )
